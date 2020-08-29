@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Machine Learning | Zachary del Rosario</title>
+    <link>/tag/machine-learning/</link>
+      <atom:link href="/tag/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <description>Machine Learning</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 29 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Machine Learning</title>
+      <link>/tag/machine-learning/</link>
+    </image>
+    
+    <item>
+      <title>Materials Informatics</title>
+      <link>/project/mat-inf/</link>
+      <pubDate>Sat, 29 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>/project/mat-inf/</guid>
+      <description>&lt;h1 id=&#34;project-features&#34;&gt;Project Features&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Consulting with scientists and engineers across industry and universities&lt;/li&gt;
+&lt;li&gt;Using 
+&lt;a href=&#34;/project/grama/&#34;&gt;Grama&lt;/a&gt; to investigate materials data&lt;/li&gt;
+&lt;li&gt;Deploying novel data science techniques to accelerate materials discovery&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;project-description&#34;&gt;Project Description&lt;/h1&gt;
+&lt;h1 id=&#34;related-publications&#34;&gt;Related Publications&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;/publication/map-jcp/&#34;&gt;Assessing the Frontier&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

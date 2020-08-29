@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zachary del Rosario</title>
+    <link>/author/zachary-del-rosario/</link>
+      <atom:link href="/author/zachary-del-rosario/index.xml" rel="self" type="application/rss+xml" />
+    <description>Zachary del Rosario</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 22 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Zachary del Rosario</title>
+      <link>/author/zachary-del-rosario/</link>
+    </image>
+    
+    <item>
+      <title>Summer Data Science</title>
+      <link>/post/2020-08-22-sds/</link>
+      <pubDate>Sat, 22 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>/post/2020-08-22-sds/</guid>
+      <description>&lt;p&gt;To get ready to teach online in the fall, I ran a summer offering of Data Science for Olin Alumni. Naomi Walker of Olin College posted a 
+&lt;a href=&#34;http://www.olin.edu/news-events/2020/olin-alumni-co-design-virtual-curriculum/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;nice interview&lt;/a&gt; about the class!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Assessing the Frontier</title>
+      <link>/publication/map-jcp/</link>
+      <pubDate>Tue, 28 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/map-jcp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Grama</title>
+      <link>/publication/grama-joss/</link>
+      <pubDate>Tue, 28 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/grama-joss/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Margin in Beta</title>
+      <link>/publication/mib-aiaaj/</link>
+      <pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate>
+      <guid>/publication/mib-aiaaj/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data-Driven Dimensional Analysis</title>
+      <link>/publication/datapi-ijmf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/publication/datapi-ijmf/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects | Zachary del Rosario</title>
+    <link>/project/</link>
+      <atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
+    <description>Projects</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 29 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Projects</title>
+      <link>/project/</link>
+    </image>
+    
+    <item>
+      <title>Grama --- A Grammar of Model Analysis</title>
+      <link>/project/grama/</link>
+      <pubDate>Sat, 29 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>/project/grama/</guid>
+      <description>&lt;h1 id=&#34;project-features&#34;&gt;Project Features&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Developing 
+&lt;a href=&#34;https://github.com/zdelrosario/py_grama&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;open-source&lt;/a&gt; Python software&lt;/li&gt;
+&lt;li&gt;Designing according to user-centered principles&lt;/li&gt;
+&lt;li&gt;Constructing a scientific modeling framework&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;project-description&#34;&gt;Project Description&lt;/h1&gt;
+&lt;p&gt;Grama is a &lt;em&gt;grammar of model analysis&lt;/em&gt;&amp;mdash;a Python package that supports building and analyzing models with quantified uncertainties. This language is heavily inspired by the 
+&lt;a href=&#34;https://www.tidyverse.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Tidyverse&lt;/a&gt;. Grama provides convenient syntax for building a model (with functions and distributions), generating data, and visualizing results. The purpose of this language is to support scientists and engineers learning to handle uncertainty, and to improve documentation + reproducibility of results.&lt;/p&gt;
+&lt;p&gt;Uncertainty Quantification (UQ) is the science of analyzing uncertainty in scientific problems and using those results to inform decisions. UQ has important applications to building safety-critical engineering systems, and to making high-consequence choices based on scientific models. However, UQ is generally not taught at the undergraduate level: Many engineers leave their undergraduate training with a purely deterministic view of their discipline, which can lead to probabilistic design errors that 
+&lt;a href=&#34;https://arc.aiaa.org/doi/abs/10.2514/6.2020-0414&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;negatively impact safety&lt;/a&gt;. To that end, Grama is designed to facilitate rapid model analysis, communication of results, and the teaching of concepts, all with quantified uncertainties. Intended users of &lt;code&gt;Grama&lt;/code&gt; are scientists and engineers at the undergraduate level and upward, seeking to analyze computationally-lightweight models.&lt;/p&gt;
+&lt;h1 id=&#34;related-publications&#34;&gt;Related Publications&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;The 
+&lt;a href=&#34;/publication/grama-joss/&#34;&gt;Grama paper&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Materials Informatics</title>
+      <link>/project/mat-inf/</link>
+      <pubDate>Sat, 29 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>/project/mat-inf/</guid>
+      <description>&lt;h1 id=&#34;project-features&#34;&gt;Project Features&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Consulting with scientists and engineers across industry and universities&lt;/li&gt;
+&lt;li&gt;Using 
+&lt;a href=&#34;/project/grama/&#34;&gt;Grama&lt;/a&gt; to investigate materials data&lt;/li&gt;
+&lt;li&gt;Deploying novel data science techniques to accelerate materials discovery&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;project-description&#34;&gt;Project Description&lt;/h1&gt;
+&lt;h1 id=&#34;related-publications&#34;&gt;Related Publications&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;/publication/map-jcp/&#34;&gt;Assessing the Frontier&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
