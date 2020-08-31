@@ -52,4 +52,4 @@ in the exercises. Additionally I use the challenges to seed in-class discussions
 about datasets, so that students gain experience talking about data science, and
 learn how to communicate their results in a professional setting.
 
-Naomi Walker of Olin College posted a [nice interview](http://www.olin.edu/news-events/2020/olin-alumni-co-design-virtual-curriculum/) about the class!
+Naomi Walker of Olin College posted a [nice interview](http://www.olin.edu/news-events/2020/olin-alumni-co-design-virtual-curriculum/) about the class. Additionally, I have released the exercises and challenges from my data science class in [open-source form](https://github.com/zdelrosario/data-science-curriculum).
