@@ -6,7 +6,7 @@ authors:
 - Yoolhee Kim
 - Erin Antono
 - Julia Ling
-date: "2020-07-09:00:00Z"
+date: "2020-07-09"
 doi: ""
 featured: false
 image:
@@ -33,5 +33,6 @@ url_project: ""
 url_slides: ""
 url_source: ""
 url_video: ""
+weight: 2
 ---
 

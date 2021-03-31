@@ -4,7 +4,7 @@ authors:
 - Lluis Jofre
 - admin
 - Gianluca Iaccarino
-date: "2020-04-01:00:00Z"
+date: "2020-04-01"
 doi: ""
 featured: false
 image:
