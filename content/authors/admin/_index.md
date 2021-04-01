@@ -19,7 +19,7 @@ interests:
 - Aircraft Structural Design
 organizations:
 - name: Olin College
-  url: www.olin.edu
+  url: https://www.olin.edu
 role: Visiting Assistant Professor of Engineering
 social:
 - icon: envelope
