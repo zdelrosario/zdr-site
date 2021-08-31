@@ -100,7 +100,7 @@ address = {street = "1000 Olin Way", city = "Needham", region = "MA", postcode =
 coordinates = {latitude = "42.292781", longitude = "-71.264082"}
 
 # Directions for visitors to locate you.
-directions = "Milas Hall 329"
+directions = "Milas Hall 332"
 
 # Office hours
 # A list of your office hours. To remove, set to an empty list `[]`.
