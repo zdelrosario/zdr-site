@@ -11,7 +11,7 @@ image:
   focal_point: ""
   placement: 2
   preview_only: false
-lastmod: "2021-08-10:00:00Z"
+lastmod: "2021-10-21:00:00Z"
 projects: [grama]
 subtitle: ''
 summary: A framework for variability in engineering
@@ -27,4 +27,4 @@ It's an exciting thing in science when you find something you didn't set out to 
 
 These two axes lead to four disjoint "flavors" of uncertainty: noise, deviation, anomaly, and mistake. I'll be teaching these ideas in Data Science this fall, and am currently operationalizing this framework as an interview protocol.
 
-Download a short {{< staticref "media/zdr-cause-source-2.pdf" "newtab" >}}Two-Page Description{{< /staticref >}} of these quadrants of variability.
+If you'd like to learn more, take a look at this [draft chapter](https://zdelrosario.github.io/uq-book-preview/02_diagnosing/uncertainty.html) from a book I'm writing on modeling under uncertainty.
