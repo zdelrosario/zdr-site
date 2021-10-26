@@ -22,14 +22,16 @@ url_video: ""
 
 # Project Features
 
-- Developing theoretical frameworks to understand uncertainty
+- Developing theoretical frameworks to analyze uncertainty
 - Designing instruments to measure and understand engineering behavior
 - Conducting interviews to gather behavioral data
 - Designing and testing educational interventions to improve engineers' understanding of uncertainty
 
 # Project Description
 
-The aim of this project is to understand practicing engineers’ capability to handle variability, and to develop engineering pedagogy to teach this skill. This work is inspired by a key finding: Every aircraft you have ever flown on has been designed using probabilistically-flawed, potentially dangerous criteria. This was a core finding of my PhD thesis work; additional archival research has revealed that these criteria have been in use since at least 1964, but their limitations and dangers were only documented in 2020. The core issue is simple: Aerospace engineers summarize variable material properties using conservative estimates for strength properties (a one-sided tolerance interval), but use a measure of central tendency (e.g. the mean) for material moduli such as material elasticity. This approach neglects variability from elastic properties, which is dangerous for laminate composites (e.g. carbon fiber): laminate static failure criteria are affected by elastic properties, and those properties have variabilities 2x to 6x that of traditional metallic materials. For failure modes involving modulus properties (e.g. buckling, dominant for wing top skin panels), the old criteria, while safe for metals, are now unsafe for highly variable composites.
+Engineers are responsible for delivering safe, efficient solutions. For instance, automobile manufacturers need to design cars that are light enough to be gas-efficient, but still sturdy enough to protect the passenger. A complication in this design process is uncertainty: No engineer can predict with 100% confidence what a driver will do with their car, or what conditions it will encounter. Traditionally, engineers handle uncertainty by "overdesign"---making things heavier than they need to be. However, scientists from other disciplines (such as statisticians) have more efficient ways to handle uncertainty. A better understanding of uncertainty---and how engineers themselves react to it---will lead to safer, more efficient engineering designs. Achieving these efficiency gains is critical for American economic competitiveness, and for addressing anthropogenic climate change. This project will study how real engineers react to uncertainty and train them to handle it more efficiently.
+
+Students working on this project will conduct interviews, perform mixed-methods analysis, and learn about the fundamental nature of uncertainty.
 
 # Related Publications
 
