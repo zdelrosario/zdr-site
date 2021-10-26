@@ -37,6 +37,9 @@ Grama is a *grammar of model analysis*---a Python package that supports building
 
 Uncertainty Quantification (UQ) is the science of analyzing uncertainty in scientific problems and using those results to inform decisions. UQ has important applications to building safety-critical engineering systems, and to making high-consequence choices based on scientific models. However, UQ is generally not taught at the undergraduate level: Many engineers leave their undergraduate training with a purely deterministic view of their discipline, which can lead to probabilistic design errors that [negatively impact safety](https://arc.aiaa.org/doi/abs/10.2514/6.2020-0414). To that end, Grama is designed to facilitate rapid model analysis, communication of results, and the teaching of concepts, all with quantified uncertainties. Intended users of `Grama` are scientists and engineers at the undergraduate level and upward, seeking to analyze computationally-lightweight models.
 
+Students seeking to join this project will need prior experience coding in Python. Students on this project will design and implement advanced data science algorithms, and will learn professional-grade software development skills.
+
 # Related Publications
 
 - The [Grama paper]({{< ref "publication/grama-joss" >}})
+- [All Models Are Uncertain](https://zdelrosario.github.io/uq-book-preview/00_frontmatter/landing-page.html)
