@@ -29,9 +29,9 @@ url_video: ""
 
 # Project Description
 
-Engineers are responsible for delivering safe, efficient solutions. For instance, automobile manufacturers need to design cars that are light enough to be gas-efficient, but still sturdy enough to protect the passenger. A complication in this design process is uncertainty: No engineer can predict with 100% confidence what a driver will do with their car, or what conditions it will encounter. Traditionally, engineers handle uncertainty by "overdesign"---making things heavier than they need to be. However, scientists from other disciplines (such as statisticians) have more efficient ways to handle uncertainty. A better understanding of uncertainty---and how engineers themselves react to it---will lead to safer, more efficient engineering designs. Achieving these efficiency gains is critical for American economic competitiveness, and for addressing anthropogenic climate change. This project will study how real engineers react to uncertainty and train them to handle it more efficiently.
+Engineers are responsible for delivering safe, efficient solutions. For instance, automobile manufacturers need to design cars that are light enough to be gas-efficient, but still sturdy enough to protect the passenger. A complication in this design process is uncertainty: No engineer can predict with 100% confidence what a driver will do with their car, or what conditions it will encounter. Traditionally, engineers handle uncertainty by "overdesign"---making things heavier than they need to be. However, scientists from other disciplines (such as statisticians) have more efficient ways to handle uncertainty. A better understanding of uncertainty---and how engineers themselves react to it---will lead to safer, more efficient engineering designs. Achieving these efficiency gains is critical for important issues, such as addressing anthropogenic climate change. This project will study how real engineers react to uncertainty and train them to handle it more efficiently.
 
-Students working on this project will conduct interviews, perform mixed-methods analysis, and learn about the fundamental nature of uncertainty.
+Students working on this project will conduct interviews, perform mixed-methods analysis, help run workshops, and learn about the fundamental nature of uncertainty.
 
 # Related Publications
 
