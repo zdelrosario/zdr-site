@@ -19,7 +19,7 @@ summary: How should engineers select materials when there is uncertainty in the 
 tags:
 - Materials Selection
 - Uncertainty Quantification
-title: Precision Materials Indices: Materials Selection with Statistically Rigorous Reliability Analysis
+title: "Precision Materials Indices: Materials Selection with Statistically Rigorous Reliability Analysis"
 url_code: ""
 url_dataset: ""
 url_pdf: ""
