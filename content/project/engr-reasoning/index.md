@@ -35,4 +35,4 @@ Students working on this project will conduct interviews, perform mixed-methods 
 
 # Related Publications
 
-- TODO: ASEE MAS
+- {{< staticref "media/aggarwal2021.pdf" "newtab" >}}Pilot study with Olin Students{{< /staticref >}}
