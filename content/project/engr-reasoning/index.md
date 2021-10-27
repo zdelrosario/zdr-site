@@ -23,7 +23,7 @@ url_video: ""
 # Project Features
 
 - Developing theoretical frameworks to analyze uncertainty
-- Designing instruments to measure and understand engineering behavior
+- Designing instruments (interviews and surveys) to measure and understand engineering behavior
 - Conducting interviews to gather behavioral data
 - Designing and testing educational interventions to improve engineers' understanding of uncertainty
 
