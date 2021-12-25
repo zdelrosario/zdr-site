@@ -3,7 +3,7 @@ authors:
 - admin
 categories:
 - Teaching
-date: "2021-12-25:00:00Z"
+date: "2021-12-25T00:00:00Z"
 draft: false
 featured: false
 image:
@@ -11,68 +11,114 @@ image:
   focal_point: ""
   placement: 2
   preview_only: false
-lastmod: "2021-12-25:00:00Z"
+lastmod: "2021-12-25T00:00:00Z"
 projects: []
 subtitle: ''
-summary: A brief introduction to exploratory model analysis.
+summary: A brief demo of exploratory model analysis.
 tags:
 - Data Science
 - Exploratory Model Analysis
-title: 'Exploratory Model Analysis: A Brief Introduction'
+title: 'Exploratory Model Analysis: A Brief Demo'
 ---
-# Exploratory Model Analysis: An Introduction
+# Exploratory Model Analysis: A Demo
+
+When studying a dataset we use an [exploratory analysis](https://en.wikipedia.org/wiki/Exploratory_data_analysis) to get an initial impression of the data. We can use a similar approach when studying a model. The [grama](https://joss.theoj.org/papers/10.21105/joss.02462) package is designed to support the analysis of models, including tools for *exploratory model analysis* (EMA). What follows is a short demonstration of EMA using grama.
+
+
+## Setup
+
+The grama package is a toolkit for analyzing models; you can install it from PyPI with the command line command `pip install py-grama`. Let's load grama to get started.
 
 
 
 ```python
 import grama as gr
 DF = gr.Intention()
+
 ```
 
-Setup
+Grama comes with a variety of built-in models. For a simple example, let's look at a model for the buckling behavior of a [flat plate](https://en.wikipedia.org/wiki/Buckling#Plate_buckling).
 
 
 
 ```python
-from grama.models import make_cantilever_beam
-md_beam = make_cantilever_beam()
-md_beam
+from grama.models import make_plate_buckle
+md_plate = make_plate_buckle()
+
+```
+
+## Top-level summary
+
+When exploring a dataset one of the most important first-steps is to inspect top-level summaries, such as the [five-number summary](https://en.wikipedia.org/wiki/Five-number_summary). In EMA there is an analogue in the top-level summary, including the input and output details.
+
+
+
+```python
+## Return a top-level summary of the model
+md_plate
+
 ```
 
 
 
 
-    model: Cantilever Beam
+    model: Plate Buckling
     
       inputs:
         var_det:
-          w: [2, 4]
-          t: [2, 4]
+          w: [6, 18]
+          L: [0.00064, 0.00256]
+          h: [6, 18]
+          t: [0.03, 0.12]
     
         var_rand:
-          H: (+1) norm, {'loc': 500.0, 'scale': 100.0}
-          V: (+1) norm, {'loc': 1000.0, 'scale': 100.0}
-          E: (+0) norm, {'loc': 29000000.0, 'scale': 1450000.0}
-          Y: (-1) norm, {'loc': 40000.0, 'scale': 2000.0}
+          E: (+0) norm, {'loc': 10344.736842105263, 'scale': 258.7392188662194}
+          mu: (+0) beta, {'a': 1.0039090847355956, 'b': 0.8622625745559566, 'loc': 0.30940527668994305, 'scale': 0.021594723310056966}
     
         copula:
-          Independence copula
+          Gaussian copula with correlations:
+      var1 var2      corr
+    0   mu    E  0.371244
     
       functions:
-          cross-sectional area: ['w', 't'] -> ['c_area']
-          limit state: stress: ['w', 't', 'H', 'V', 'E', 'Y'] -> ['g_stress']
-          limit state: displacement: ['w', 't', 'H', 'V', 'E', 'Y'] -> ['g_disp']
+          limit state: ['t', 'h', 'w', 'E', 'mu', 'L'] -> ['g_buckle']
 
 
 
-Sinews (ceteris paribus) plot
+Some key observations from this summary:
+
+- `md_plate` has four deterministic variables: `t, L, w, h`
+- the model has two random variables `E, mu`
+  - `E` is normally distributed
+  - `mu` is distributed as a beta distribution
+  - `E` and `mu` have a positive correlation
+- the model maps all of its inputs to a single output `g_buckle`
+  - this is a limit state; a function where $g > 0$ corresponds to safe operation
+
+## Model Context
+  
+While summaries are useful for understanding a model, they are not sufficient. One of the additional pieces of information we need to interpret a model is its *context*, including what its inputs and outputs represent. This gives us the knowledge we need to understand the *consequences* of the observations we make. Context is specific to a model, and often not purely mathematical.
+  
+There is a lot of context we could discuss with the buckling plate model, but this is the most important fact: **Larger values of `g_buckle` indicate a safer plate, while smaller values of `g_buckle` are more dangerous. A value of `g_buckle == 0` is barely unsafe.**
+  
+
+## Visual Summaries
+
+For something like a buckling plate, we could inspect the governing equation in order to learn about the model's behavior. An alternative would be to use an EMA approach using visuals.
+
+
+### Input Effects: Sinew Plots
+
+First, let's use a [sinew plot](https://py-grama.readthedocs.io/en/latest/source/grama.html?highlight=sinew#grama.eval_random.eval_sinews) to study how the inputs affect the output. Note that since `md_plate` contains a great deal of information, we can generate a dataset and visualize the results in just a few lines of code.
 
 
 
 ```python
 (
-    md_beam
-    >> gr.ev_sinews(df_det="nom")
+    md_plate
+    # Evaluate the model
+    >> gr.ev_sinews(df_det="swp")
+    # Visualize
     >> gr.pt_auto()
 )
 ```
@@ -82,16 +128,147 @@ Sinews (ceteris paribus) plot
 
 
     
-![png](/media/ema-intro_files/ema-intro_5_1.png)
+![png](/media/ema-intro_files/ema-intro_11_1.png)
     
 
 
 
 
 
-    <ggplot: (8777835322621)>
+    <ggplot: (8780269552113)>
 
 
 
-# Endnotes
+Every panel above shows a sweep in values for a single input, with all other inputs held to a fixed value. Thus, the collection of curves shows how each input can affect the output, and how those effects compare across the model inputs. For the buckling plate model, we can see:
+
+- the inputs `E, L, mu, w` have relatively little effect
+- increasing `h` decreases `g_buckle`
+  - This is the height of the plate; a taller plate is more unsafe.
+- increasing `t` increases `g_buckle`
+  - This is the thickness of the plate; a thicker plate is safer.
+
+
+We can better understand how a sinew plot is generated by visualizing the input values (ignoring the outputs).
+
+
+
+```python
+(
+    md_plate
+    # The `skip` keyword allows us to skip evaluating the model outputs
+    >> gr.ev_sinews(df_det="swp", skip=True)
+    >> gr.pt_auto()
+)
+```
+
+    Design runtime estimates unavailable; model has no timing data.
+    Calling plot_sinew_inputs....
+
+
+    Warning: Matplotlib is currently using module://ipykernel.pylab.backend_inline, which is a non-GUI backend, so cannot show the figure.
+
+
+
+    
+![png](/media/ema-intro_files/ema-intro_14_2.png)
+    
+
+
+This is a [scatterplot matrix](https://en.wikipedia.org/wiki/Scatter_plot#Scatter_plot_matrices) of all the input values: Notice that we see parallel lines across each panel. These lines are generated by choosing a set of random points within the input space, then sweeping "outward" along each of the input variables.
+
+
+### Uncertainties: Monte Carlo
+
+From the top-level summary, we saw that the model has two random variables. We can use Monte Carlo to help understand how these uncertainties affect the model results. First, we use a `skip=True` analysis to inspect how the inputs behave.
+
+
+
+```python
+(
+    md_plate
+    >> gr.ev_monte_carlo(n=1e3, df_det="nom", skip=True)
+    >> gr.pt_auto()
+)
+```
+
+    eval_monte_carlo() is rounding n...
+    Design runtime estimates unavailable; model has no timing data.
+    Calling plot_scattermat....
+
+
+    Warning: Matplotlib is currently using module://ipykernel.pylab.backend_inline, which is a non-GUI backend, so cannot show the figure.
+
+
+
+    
+![png](/media/ema-intro_files/ema-intro_17_2.png)
+    
+
+
+Here we can see that `E` has a normal shape, `mu` has a flatter shape (a beta distribution), and the two variables are positively correlated.
+
+
+Next, we can remove the `skip` keyword to check how the randomness in the inputs generates randomness in the model outputs. 
+
+
+
+```python
+(
+    md_plate
+    >> gr.ev_monte_carlo(n=1e3, df_det="nom")
+    >> gr.pt_auto()
+)
+```
+
+    eval_monte_carlo() is rounding n...
+    Calling plot_hists....
+
+
+
+    
+![png](/media/ema-intro_files/ema-intro_20_1.png)
+    
+
+
+
+
+
+    <ggplot: (8780268977312)>
+
+
+
+This shows us that the `g_buckle` output is not certain. However, comparing the width of the distribution (about $\pm 0.01$) to its mean (about $0.115$), we can see that the variability is not large compared to the scale of `g_buckle`.
+
+While grama provides the convenient `gr.pt_auto()` utility, we can construct a more specific plot to encode things like the model context. Remember that the value `g_buckle == 0` is special; we can construct a plot that highlights this special value.
+
+
+
+```python
+(
+    md_plate
+    >> gr.ev_monte_carlo(n=1e3, df_det="nom")
+    >> gr.ggplot(gr.aes("g_buckle"))
+    + gr.geom_histogram(bins=60)
+    + gr.geom_vline(xintercept=0, linetype="dashed")
+    + gr.theme_minimal()
+)
+```
+
+    eval_monte_carlo() is rounding n...
+
+
+
+    
+![png](/media/ema-intro_files/ema-intro_22_1.png)
+    
+
+
+
+
+
+    <ggplot: (8780268084923)>
+
+
+
+This version of the plot shows that the distribution of `g_buckle` is very well separated from the zero threshold: This shows us that the model suggests a very safe plate that is not in danger of buckling.
 
