@@ -82,7 +82,7 @@ Sinews (ceteris paribus) plot
 
 
     
-![png](/ema-intro_files/ema-intro_5_1.png)
+![png](/media/ema-intro_files/ema-intro_5_1.png)
     
 
 

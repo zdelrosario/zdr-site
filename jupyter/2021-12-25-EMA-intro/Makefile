@@ -10,7 +10,7 @@ all: ${MD}
 	# Render to markdown
 	jupyter nbconvert --to markdown $<
 	# Fix the image directory
-	sed -i '' "s/$*_files/\/$*_files/g" $@
+	sed -i '' "s/$*_files/\/media\/$*_files/g" $@
 	# Concatenate the header and rendered notebook
 	cat top.md $@ > index.md
 	# Move the images to static
