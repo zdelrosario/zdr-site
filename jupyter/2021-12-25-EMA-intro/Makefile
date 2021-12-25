@@ -1,4 +1,5 @@
 SRC := $(wildcard *.ipynb)
+STEM := $(subst .ipynb,,$(SRC))
 MD := $(subst ipynb,md,$(SRC))
 mkfile_path := $(abspath $(lastword $(MAKEFILE_LIST)))
 DIR := $(notdir $(patsubst %/,%,$(dir $(mkfile_path))))
@@ -17,6 +18,11 @@ all: ${MD}
 	mkdir -p ../../content/post/${DIR}
 	mv -f index.md ../../content/post/${DIR}/.
 	find $*_files -maxdepth 1 -type f | grep png | head -1 | xargs -I{} cp {} ../../content/post/${DIR}/featured.png
+
+add:
+	# Add post files
+	git add ../../content/post/${DIR}
+	git add ../../static/media/${STEM}_files
 
 clean:
 	rm ${MD}
