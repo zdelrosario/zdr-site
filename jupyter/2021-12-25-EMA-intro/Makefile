@@ -13,6 +13,7 @@ all: ${MD}
 	cat top.md $@ > index.md
 	# Move the images to static
 	mkdir -p ../../static/media/$*_files
+	find $*_files -maxdepth 1 | grep png | xargs -I{} convert {} -background white -alpha remove -alpha off {}
 	cp -f $*_files/* ../../static/media/$*_files/.
 	# Move to post
 	mkdir -p ../../content/post/${DIR}
