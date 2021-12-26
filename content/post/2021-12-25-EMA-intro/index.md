@@ -22,12 +22,12 @@ title: 'Exploratory Model Analysis: A Brief Demo'
 ---
 # Exploratory Model Analysis: A Demo
 
-When studying a dataset we use an [exploratory analysis](https://en.wikipedia.org/wiki/Exploratory_data_analysis) to get an initial impression of the data. We can use a similar approach when studying a model. The [grama](https://joss.theoj.org/papers/10.21105/joss.02462) package is designed to support the analysis of models, including tools for *exploratory model analysis* (EMA). What follows is a short demonstration of EMA using grama.
+When studying a dataset we use an [exploratory analysis](https://en.wikipedia.org/wiki/Exploratory_data_analysis) to gather an initial impression of the data. We can use a similar approach when studying a model. The [grama](https://joss.theoj.org/papers/10.21105/joss.02462) python package is designed to support the analysis of models, including *exploratory model analysis* (EMA). What follows is a short demonstration of EMA using grama.
 
 
 ## Setup
 
-The grama package is a toolkit for analyzing models; you can install it from PyPI with the command line command `pip install py-grama`. Let's load grama to get started.
+The grama package is a python toolkit for analyzing models; you can install it from PyPI with the terminal command `pip install py-grama`. Let's load grama to get started.
 
 
 
@@ -37,7 +37,7 @@ DF = gr.Intention()
 
 ```
 
-Grama comes with a variety of built-in models. For a simple example, let's look at a model for the buckling behavior of a [flat plate](https://en.wikipedia.org/wiki/Buckling#Plate_buckling).
+Grama comes with a variety of built-in models. As an example, let's look at a model for the buckling behavior of a [flat plate](https://en.wikipedia.org/wiki/Buckling#Plate_buckling). The following code instantiates a grama model of a plate under buckling (compressive) load.
 
 
 
@@ -49,7 +49,7 @@ md_plate = make_plate_buckle()
 
 ## Top-level summary
 
-When exploring a dataset one of the most important first-steps is to inspect top-level summaries, such as the [five-number summary](https://en.wikipedia.org/wiki/Five-number_summary). In EMA there is an analogue in the top-level summary, including the input and output details.
+When exploring a dataset one of the most important first-steps is to inspect top-level summaries, such as the [five-number summary](https://en.wikipedia.org/wiki/Five-number_summary). In EMA there is an analogue sense of top-level summary. Important summary information includes the input and output details, which grama makes easily accessible:
 
 
 
@@ -97,14 +97,16 @@ Some key observations from this summary:
 
 ## Model Context
   
-While summaries are useful for understanding a model, they are not sufficient. One of the additional pieces of information we need to interpret a model is its *context*, including what its inputs and outputs represent. This gives us the knowledge we need to understand the *consequences* of the observations we make. Context is specific to a model, and often not purely mathematical.
+While summaries are useful for understanding a model, they are not sufficient for a full understanding. One of the additional pieces of information we need to interpret a model is its *context*, including what its inputs and outputs represent. This gives us the knowledge we need to understand the *consequences* of the observations we make. Context is specific to a model, and often not purely mathematical.
   
-There is a lot of context we could discuss with the buckling plate model, but this is the most important fact: **Larger values of `g_buckle` indicate a safer plate, while smaller values of `g_buckle` are more dangerous. A value of `g_buckle == 0` is barely unsafe.**
+There is a lot of context we could discuss with the buckling plate model, but we'll focus on one important fact: **Larger values of `g_buckle` indicate a safer plate, while smaller values of `g_buckle` are more dangerous. A value of `g_buckle == 0` is barely unsafe.**
   
 
 ## Visual Summaries
 
-For something like a buckling plate, we could inspect the governing equation in order to learn about the model's behavior. An alternative would be to use an EMA approach using visuals.
+For something like a buckling plate, we could inspect the governing equation in order to learn about the model's behavior. An alternative would be to use an EMA approach using visuals. A visual approach generalizes to cases where we don't have an explicit equation, and provides us with techniques we can apply to many different models.
+
+Let's take a look at some visual summaries of the model's behavior.
 
 
 ### Input Effects: Sinew Plots
@@ -116,9 +118,9 @@ First, let's use a [sinew plot](https://py-grama.readthedocs.io/en/latest/source
 ```python
 (
     md_plate
-    # Evaluate the model
+    # Evaluate the model to generate a dataset
     >> gr.ev_sinews(df_det="swp")
-    # Visualize
+    # Visualize the data
     >> gr.pt_auto()
 )
 ```
@@ -143,12 +145,12 @@ Every panel above shows a sweep in values for a single input, with all other inp
 
 - the inputs `E, L, mu, w` have relatively little effect
 - increasing `h` decreases `g_buckle`
-  - This is the height of the plate; a taller plate is more unsafe.
+  - This is the height of the plate; a taller plate buckles more easily.
 - increasing `t` increases `g_buckle`
-  - This is the thickness of the plate; a thicker plate is safer.
+  - This is the thickness of the plate; a thicker plate is harder to buckle.
 
 
-We can better understand how a sinew plot is generated by visualizing the input values (ignoring the outputs).
+We can better understand how a sinew plot is generated by visualizing the input values (not plotting any output values).
 
 
 
@@ -174,7 +176,9 @@ We can better understand how a sinew plot is generated by visualizing the input 
     
 
 
-This is a [scatterplot matrix](https://en.wikipedia.org/wiki/Scatter_plot#Scatter_plot_matrices) of all the input values: Notice that we see parallel lines across each panel. These lines are generated by choosing a set of random points within the input space, then sweeping "outward" along each of the input variables.
+This is a [scatterplot matrix](https://en.wikipedia.org/wiki/Scatter_plot#Scatter_plot_matrices) of all the input values: Notice that we see parallel lines across each panel. These lines are generated by choosing a set of random points within the input space, then sweeping along each of the input variables. The visual we saw before uses points along each input sweep, along with the corresponding output value.
+
+Sinew plots help us understand how the model outputs behave with respect to the inputs. The next analysis type will help us understand uncertainties associated with the model.
 
 
 ### Uncertainties: Monte Carlo
@@ -208,7 +212,7 @@ From the top-level summary, we saw that the model has two random variables. We c
 Here we can see that `E` has a normal shape, `mu` has a flatter shape (a beta distribution), and the two variables are positively correlated.
 
 
-Next, we can remove the `skip` keyword to check how the randomness in the inputs generates randomness in the model outputs. 
+Next, we can remove the `skip` keyword to check how the uncertainty in the inputs generates uncertainty in the model outputs. 
 
 
 
@@ -239,7 +243,7 @@ Next, we can remove the `skip` keyword to check how the randomness in the inputs
 
 This shows us that the `g_buckle` output is not certain. However, comparing the width of the distribution (about $\pm 0.01$) to its mean (about $0.115$), we can see that the variability is not large compared to the scale of `g_buckle`.
 
-While grama provides the convenient `gr.pt_auto()` utility, we can construct a more specific plot to encode things like the model context. Remember that the value `g_buckle == 0` is special; we can construct a plot that highlights this special value.
+While grama provides the convenient `gr.pt_auto()` utility, we can construct a more specific plot to encode things like the model context. Remember that the value `g_buckle == 0` is special; we can construct a plot that highlights this special value. Grama imports the [plotnine](https://plotnine.readthedocs.io/en/stable/) package for visualization.
 
 
 
