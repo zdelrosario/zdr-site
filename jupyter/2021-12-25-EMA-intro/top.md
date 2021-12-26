@@ -14,9 +14,9 @@ image:
 lastmod: "2021-12-25T00:00:00Z"
 projects: []
 subtitle: ''
-summary: A brief introduction to exploratory model analysis.
+summary: A brief demo of exploratory model analysis.
 tags:
 - Data Science
 - Exploratory Model Analysis
-title: 'Exploratory Model Analysis: A Brief Introduction'
+title: 'Exploratory Model Analysis: A Brief Demo'
 ---
