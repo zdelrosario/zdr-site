@@ -39,5 +39,5 @@ If you are selected for the study, we will contact you at your provided email ad
 This work is supported by the NSF under Grant Number #2138463. For more information, please see [this flyer](https://github.com/zdelrosario/zdr-site/blob/master/static/media/EVC_flyer.pdf).
 
 Warm regards,
-Zachary del Rosario, PhD
-Assistant Professor, Olin College
+
+Zachary del Rosario, Assistant Professor, Olin College
