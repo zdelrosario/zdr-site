@@ -34,7 +34,7 @@ While participation in the study is free, space is limited. If you are intereste
 
   https://olin.qualtrics.com/jfe/form/SV_0ddPshQmPbql8Ym
 
-If you are selected for the study, we will contact you at your provided email address with more information. If you would like more information about study, please contact me at zdelrosario@olin.edu. Please do not hesitate to contact me if you are interested in learning more about this Institutional Review Board-approved project.
+If you are selected for the study, we will contact you at your provided email address with more information. If you would like more information about study, please [contact me](https://www.zdelrosario.com/#contact). Please do not hesitate to contact me if you are interested in learning more about this Institutional Review Board-approved project.
 
 This work is supported by the NSF under Grant Number #2138463. For more information, please see [this flyer](https://github.com/zdelrosario/zdr-site/blob/master/static/media/EVC_flyer.pdf).
 
