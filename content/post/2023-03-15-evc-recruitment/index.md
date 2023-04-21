@@ -30,7 +30,7 @@ The workshop will cover:
 
 - Visualizing data to gain insights
 - Making messy data usable for analysis
-- Handling uncertainty with statistical analyses
+- An intuitive, hands-on treatment of statistics
 
 The course is designed to be compatible with full-time employment (taught online, outside working hours), will consist of hands-on training with computational tools, and will include live instruction with a professor from Olin College.
 
