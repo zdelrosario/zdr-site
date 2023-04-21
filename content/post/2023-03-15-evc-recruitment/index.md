@@ -14,7 +14,7 @@ image:
 lastmod: "2023-03-15:00:00Z"
 projects: []
 subtitle: ''
-summary: I am recruiting participants for a study of how engineers reason about data. This study includes a free 6-week professional development course!
+summary: Join my research study to take a free professional development course on data science for engineers!
 tags:
 - Engineering
 - Data Science
@@ -22,13 +22,17 @@ tags:
 title: 'Olin College Research Study: Data Science for Engineers'
 ---
 
-Please forward this message to any engineers you think may be interested in this opportunity.
+Are you interested in learning how to use data science in your engineering work? Are you a practicing engineer? You might be interested in this opportunity!
 
-Data science is the use of computational tools to access and make sense of data. Data science has the potential to accelerate engineering and produce more efficient technology. However, such tools are typically marketed to the biological sciences, financial sector, and “Big Tech”---it is not immediately clear how to use “cat-detector technology” to support serious engineering!
+This summer (June of 2023) I am running a study of practicing engineers. This study includes a *free* 2-day professional development workshop on data science in engineering. This workshop is designed for engineers with a background in structural engineering, such as mechanical, civil, aerospace, and related disciplines.
 
-Thanks to a generous grant from the National Science Foundation, I am running a study of practicing engineers. This study includes a *free* 2-day professional development workshop on data science in engineering. This course is designed for engineers with a background in structural engineering, such as mechanical, civil, aerospace, and related disciplines.
+The workshop will cover:
 
-This course will cover visualizing data, managing complex datasets, and applying statistics to learn from engineering data. The course is designed to be compatible with full-time employment (taught online, outside working hours), will consist of hands-on training with computational tools, and will include live instruction with a professor from Olin College.
+- Visualizing data to gain insights
+- Making messy data usable for analysis
+- Handling uncertainty with statistical analyses
+
+The course is designed to be compatible with full-time employment (taught online, outside working hours), will consist of hands-on training with computational tools, and will include live instruction with a professor from Olin College.
 
 While participation in the study is free, space is limited. If you are interested in the study, please fill out this application:
 
