@@ -12,12 +12,14 @@ tags:
 - Uncertainty Quantification
 - Machine Learning
 - Materials Informatics
-title: Materials Informatics
+title: Past Project: Materials Informatics
 url_code: ""
 url_pdf: ""
 url_slides: ""
 url_video: ""
 ---
+
+Please note that this project is **not active.**
 
 # Project Features
 
