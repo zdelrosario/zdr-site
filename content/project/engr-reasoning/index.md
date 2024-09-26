@@ -2,7 +2,7 @@
 date: "2024-09-26T00:00:00Z"
 external_link: ""
 image:
-  caption: Cause-Source framework for uncertainty in engineering
+  caption: Past results: A framework describing data practices of real engineers
   focal_point: Smart
 links:
 summary: Understanding Engineers' Reasoning Under Uncertainty
@@ -38,5 +38,5 @@ Past project activities have included conducting interviews with practicing engi
 
 # Related Publications
 
-- {{< staticref "media/zdr2024(JSDSE)_NAT_Taxonomy.pdf" "newtab" >}}Taxonomy of practicing engineers' data practices{{< /staticref >}}
+- {{< staticref "media/zdr2024(JSDSE)_NAT_Taxonomy.pdf" "newtab" >}}Taxonomy describing the data practices of real engineers{{< /staticref >}}
 - {{< staticref "media/bostwick2024(ERM)_when_relevant.pdf" "newtab" >}}Student reflection study of uncertainty in engineering classes{{< /staticref >}}
