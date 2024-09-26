@@ -13,10 +13,9 @@ education:
     year: 2014
 email: "zdelrosario@olin.edu"
 interests:
-- Uncertainty Quantification
+- Engineering and Statistics Education
 - Data Science
-- Materials Informatics
-- Aircraft Structural Design
+- Qualitative Research Methods
 organizations:
 - name: Olin College
   url: https://www.olin.edu
@@ -40,6 +39,6 @@ user_groups:
 - Principal Investigators
 ---
 
-Zachary del Rosario is an Assistant Professor of Engineering and Applied Statistics at Olin College. His goal is to help scientists and engineers reason under uncertainty. Zach uses a toolkit from data science and uncertainty quantification to address a diverse set of problems, including reliable aircraft design and AI-assisted discovery of novel materials.
+Zachary del Rosario is an Assistant Professor of Engineering and Applied Statistics at Olin College. His goal is to help scientists and engineers reason under uncertainty. Zach started as a technical researcher working on statistical procedures for engineering design. Now, he uses qualitative research methods to understand how engineers deal with uncertainty in practice.
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "media/zdr_cv.pdf" "newtab" >}}CV{{< /staticref >}}.
