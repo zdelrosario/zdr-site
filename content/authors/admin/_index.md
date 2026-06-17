@@ -19,7 +19,7 @@ interests:
 organizations:
 - name: Olin College
   url: https://www.olin.edu
-role: Assistant Professor of Engineering and Applied Statistics
+role: Associate Professor of Engineering and Applied Statistics
 social:
 - icon: envelope
   icon_pack: fas
@@ -39,6 +39,6 @@ user_groups:
 - Principal Investigators
 ---
 
-Zachary del Rosario is an Assistant Professor of Engineering and Applied Statistics at Olin College. His goal is to help scientists and engineers reason under uncertainty. Zach started as a technical researcher working on statistical procedures for engineering design. Now, he uses qualitative research methods to understand how engineers deal with uncertainty in practice.
+Zach del Rosario is an Associate Professor of Engineering and Applied Statistics at Olin College. He works as a discipline-based education researcher at the intersection of engineering and statistics. Zach favors qualitative research methods, and has research interests in the teaching of engineering modeling and statistical thinking.
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "media/zdr_cv.pdf" "newtab" >}}CV{{< /staticref >}}.
